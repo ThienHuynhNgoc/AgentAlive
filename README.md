@@ -31,11 +31,11 @@ AgentAlive/
 
 The system uses three cooperating LLM agents in a loop:
 
-| Agent      | Model                        | Role                                              |
-| ---------- | ---------------------------- | ------------------------------------------------- |
-| THINKER    | Gemini 3 Flash (`gemini -p`) | Graph-based reasoning over the knowledge graph    |
-| REFLECTION | GPT-5.4 (`codex exec`)       | Self-critique and belief revision                 |
-| ACTION     | Claude Opus 4.6 (`claude -p`)| Response generation and tool invocation           |
+| Agent      | Model                         | Role                                           |
+| ---------- | ----------------------------- | ---------------------------------------------- |
+| THINKER    | Gemini 3 Flash (`gemini -p`)  | Graph-based reasoning over the knowledge graph |
+| REFLECTION | GPT-5.4 (`codex exec`)        | Self-critique and belief revision              |
+| ACTION     | Claude Opus 4.6 (`claude -p`) | Response generation and tool invocation        |
 
 A shared **Neo4j knowledge graph** is maintained across sessions, enabling perpetual memory in both **Hot Brain** (live update) and **Freeze Brain** (static snapshot) modes.
 
@@ -43,11 +43,11 @@ A shared **Neo4j knowledge graph** is maintained across sessions, enabling perpe
 
 ## Datasets
 
-| Dataset     | Samples | Description                                   | Setup                          |
-| ----------- | ------- | --------------------------------------------- | ------------------------------ |
-| LoCoMo      | 1,986   | Long-context multi-session conversational QA  | `cd data/locomo && bash download.sh` |
-| LongMemEvalS| 500     | QA over >100K-token conversation histories    | `cd data/longmemeval && bash download.sh` |
-| Industrial  | 50      | Synthetic manufacturing facility dialogues    | Included directly in repo      |
+| Dataset      | Samples | Description                                  | Setup                                     |
+| ------------ | ------- | -------------------------------------------- | ----------------------------------------- |
+| LoCoMo       | 1,986   | Long-context multi-session conversational QA | `cd data/locomo && bash download.sh`      |
+| LongMemEvalS | 500     | QA over >100K-token conversation histories   | `cd data/longmemeval && bash download.sh` |
+| Industrial   | 50      | Generated manufacturing facility dialogues   | Included directly in repo                 |
 
 See [`data/README.md`](data/README.md) for the full dataset documentation and common evaluation schema.
 
